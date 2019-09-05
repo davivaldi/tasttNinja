@@ -25,14 +25,14 @@ namespace hungryNinjas
     public Food Serve()
     {
         Random rand = new Random();
-        for (var idx = 0; idx < Menu.Count; idx++)
-{
-         
-}
+        return Menu[rand.Next(Menu.Count)];
+//         for (int i = 0; i < Menu.Count; i++)
+// {
+// }
     }
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+        
         }
     }
 }

@@ -3,23 +3,24 @@ using System.Collections.Generic;
 
 namespace hungryNinjas
 {
-     public class Ninja
+     abstract class Ninja
     {
-    private int calorieIntake;
+    protected int calorieIntake;
     private bool isfull;
-    public List<Food> FoodHistory;
+    public List<IConsumable> ConsumptionHistory;
     
-    public bool Isfull{
-        get{ return Isfull;}
-    }
+    
     public Ninja(){
         calorieIntake = 0;
-        List<Food>FoodHistory = new List<Food>();
+        ConsumptionHistory = new List<IConsumable>();
     }
+    public abstract bool IsFull {get; }
+    public abstract void Consume(IConsumable item);
     public void Eat(Food item)
     {
-        if(!Isfull){
-            
+        if(!IsFull){
+          
+
         }
     }
         static void Main(string[] args)
